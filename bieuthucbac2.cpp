@@ -55,7 +55,7 @@ int main(){
    	printf("a = %d va b = %d", a,b);
    } else {
    	float x;
-   	x = -b/(2*a);
+   	x = -(float)b/(2*a);
    	printf("nghiem x =  %f \n" , x);
    }
 }
