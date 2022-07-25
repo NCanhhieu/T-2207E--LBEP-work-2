@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define EPSILON 0.0000000001f
-
+#include <math.h>
 using namespace std;
 double fabs ( double K ) {
 	if ( K < 0 ) {
@@ -12,7 +12,6 @@ double canbac(int N){
 	double kq = 1.0f;
     while (( fabs( kq * kq - N) / N )>= EPSILON ){
 		kq = (N / kq  - kq) / 2 + kq;
-	
 }
 	return kq;
 }
@@ -37,9 +36,9 @@ int main(){
 			   printf("vo nghiem"); 
 			}
 		} else  { 
-		    double x0;
-		    x0 = -c/b;
-		    printf("x0 =  %lf \n" , x0);
+		    float x = 1;
+		    x = -((x *c)/b );
+		    printf("x =  %f \n" , x);
 		}
 		}
 	else {
@@ -48,7 +47,7 @@ int main(){
     if ( delta > 0 ) {
     float x1, x2;
 	x1 = (-b - canbac(delta))/(2*a);
-	x2 = (-b + canbac(delta))/(2*a);
+	x2 = (-b + sqrt(delta))/(2*a);
     printf("x1 =  %f \n" , x1);
     printf("x2 =  %f \n" , x2);
    } else if ( delta > 0 ){
