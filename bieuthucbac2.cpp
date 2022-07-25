@@ -36,9 +36,8 @@ int main(){
 			   printf("vo nghiem"); 
 			}
 		} else  { 
-		    float x = 1;
-		    x = -((x *c)/b );
-		    printf("x =  %f \n" , x);
+		    float x = -c/((float)b);
+		    printf(" nghiem x =  %f \n" , x);
 		}
 		}
 	else {
@@ -48,6 +47,7 @@ int main(){
     float x1, x2;
 	x1 = (-b - canbac(delta))/(2*a);
 	x2 = (-b + sqrt(delta))/(2*a);
+	printf(" phuong trinh co 2 nghiem: \n"); 
     printf("x1 =  %f \n" , x1);
     printf("x2 =  %f \n" , x2);
    } else if ( delta > 0 ){
@@ -56,7 +56,7 @@ int main(){
    } else {
    	float x;
    	x = -b/(2*a);
-   	printf("x =  %f \n" , x);
+   	printf("nghiem x =  %f \n" , x);
    }
 }
    return 0;	
